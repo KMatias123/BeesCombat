@@ -1,0 +1,39 @@
+main: me.MartHus.BeesCombat.Main
+name: BeesCombat
+version: 1.0
+author: MartHus
+description: This plugin is a plugin for messing around in pvp with some fancy items
+website: marvhus.github.io
+prefix: Bees Combat
+
+commands:
+  startCombat:
+    description: Starts combat so players will recieve items if they respawn
+    permission: beesCombat.combat.enable
+    usage: "Usage: /<command>"
+
+  stopCombat:
+    description: Stops combat so players will not recieve items if they respawn
+    permission: beesCombat.combat.disable
+    usage: "Usage: /<command>"
+    
+permission:
+  beesCombat.combat.enable:
+    description: allows the startCombat command
+    default: op
+  beesCombat.combat.disable:
+    description: allows the stopCombat command
+    default: op
+  beesCombat.combat:
+    description: allows all the combat commands for beesCombat
+    default: op
+    children:
+      beesCombat.combat.enable: true
+      beesCombat.combat.disable: true
+  beesCombat.*:
+    description: allows all the beesCombat commands
+    default: op
+    children:
+      beesCombat.combat: true
+  
+  
