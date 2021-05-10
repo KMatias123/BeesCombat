@@ -7,10 +7,12 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
 
-import me.MartHus.BeesCombat.Main;
+import me.MartHus.BeesCombat.Items;
 
 public class BlockPlace implements Listener {
 
+	Items items = new Items();
+	
 	@EventHandler
 	public void blockPlace (BlockPlaceEvent event)
 	{
@@ -23,7 +25,7 @@ public class BlockPlace implements Listener {
 		if (material.equals(Material.STONE))
 		{
 			player.sendMessage("Stone placed");
-			player.getInventory().addItem(Main.StoneBlock);
+			player.getInventory().addItem(Items.StoneBlock);
 		}
 		else
 		{
