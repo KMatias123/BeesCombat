@@ -30,10 +30,3 @@ permission:
     children:
       beesCombat.combat.enable: true
       beesCombat.combat.disable: true
-  beesCombat.*:
-    description: allows all the beesCombat commands
-    default: op
-    children:
-      beesCombat.combat: true
-  
-  
